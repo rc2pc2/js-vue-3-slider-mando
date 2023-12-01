@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 v-others</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <header>
+            <h1>
+                The Mandalorian
+            </h1>
+        </header>
+        <main class="wrapper">
+            <section class="slider">
+                <div class="main-slider-item">
+                    <article class="slider-image">
+                        <img :src="images[activeIndex]" alt="">
+                    </article>
+                    <div class="slider-button prev">
+                        &#9754;
+                    </div>
+                    <div class="slider-button next" @click="nextSlide()">
+                        &#9755;
+                    </div>
+                </div>
+                <div class="slider-thumbs">
+
+                    <!-- ? (condizione) ? VALOREDIVERO : VALOREDIFALSO -->
+                    <article v-for="(imageUrl, index) in images" class="thumb-item" :class="(index === activeIndex) ? 'active' : ''">
+                        <img :src="imageUrl" alt="Mandalorian thumbnail slide" @click="changeSlideTo(index)">
+                    </article>
+                </div>
+                <div class="slider-info">
+                    <h2>
+                        {{ title  }}
+                    </h2>
+                    <p>
+                        {{  description }}
+                    </p>
+                    <p>
+                        <span v-for="category in categories">
+                            {{ category }}
+                        </span>
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

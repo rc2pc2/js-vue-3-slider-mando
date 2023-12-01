@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header h1{
+    padding-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main.wrapper{
+    padding: 1rem;
+}
+
+main section.slider{
+    width: 280px;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+
+
+    overflow: hidden;
+    /* Credits to getcssscan.com */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 1rem ;
+}
+
+img{
+    width: 100%;
+}
+
+
+div.main-slider-item{
+    position: relative;
+}
+
+
+div.slider-button{
+    position: absolute;
+    display: block;
+    background-color: white;
+    padding: .22rem .44rem;
+    font-size: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+div.slider-button.next{
+    right: 0;
+}
+
+div.slider-button.prev{
+    left: 0;
+}
+
+div.slider-thumbs{
+    display: flex;
+    height: 120px;
+}
+
+div.slider-thumbs img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+div.slider-thumbs article.active{
+    border: 3px solid magenta;
+}
+
+section.slider div.slider-info{
+    padding: 1rem;
+    text-align: center;
+    font-size: .7rem;
+}
+
+section.slider div.slider-info > *{
+    margin-bottom: .25rem;
+}
+
+
+div.slider-info span{
+    margin-right: .33rem;
+    font-style: italic;
+}
